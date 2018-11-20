@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Program</title>
+<style>
+a:link {color:white;}      /* unvisited link */
+a:visited {color:white;}  /* visited link */
+a:hover {color:red;}  /* mouse over link */
+body
+{background-image:url('FON.png');
+background-position:top;
+background-attachment:local;}
+table, td, th
+  {border:2px solid black;}
+td
+  {border:2px solid black;}
+th
+  {border:2px solid black;}
+p
+  {color:white;
+  font-size:120%;
+  font-family:Nyala}
+form
+  {color:white;
+   font-size:120%;}
+u
+  {color:white;
+   font-size:120%;}
+.Booking
+  {position:absolute;
+   top:250px;
+   right:575px;}
+.menu
+{
+  position:absolute;
+  top:35px;
+  right:583px;}
+.head{
+  position:absolute;
+  top:0px;
+  right:0px;
+  z-index:-1}
+.text{
+  position:absolute;
+  top:0px;
+  right:0px;
+  z-index:-1}
+.end{
+	position:absolute;
+	top:1180px;
+	font-size:75%;}
+</style>
+<script type="text/javascript">
+function myF(Sum) 
+{
+/*TICKET PRICE*/    
+	
+ if (document.getElementById('kin').checked||document.getElementById('kin1').checked){
+    time = 120;timeChild = 100; timeStud = 110;timeSen = 105;}
+ if (document.getElementById('kin2').checked||document.getElementById('kin3').checked){
+    time = 140;timeChild = 120; timeStud = 120;timeSen = 115;}
+ if (document.getElementById('kin4').checked||document.getElementById('kin5').checked){
+    time = 120;timeChild = 100; timeStud = 110;timeSen = 105;}
+/*TIME*/	
+if (document.getElementById('kin').checked) {
+    timekin = Sum.timek.value;} 
+ if (document.getElementById('kin1').checked) {
+    timekin = Sum.timek1.value;}
+ if (document.getElementById('kin2').checked) {
+    timekin = Sum.timek2.value;}
+ if (document.getElementById('kin3').checked) {
+    timekin = Sum.timek3.value;}
+ if (document.getElementById('kin4').checked) {
+    timekin = Sum.timek4.value;}
+ if (document.getElementById('kin5').checked) {
+    timekin = Sum.timek5.value;}
+
+ if (document.getElementById('days').checked) {
+    dayx = Sum.dayk.value;} 
+ if (document.getElementById('days1').checked) {
+    dayx = Sum.dayk1.value;}
+ if (document.getElementById('days2').checked) {
+    dayx = Sum.dayk2.value;}
+ if (document.getElementById('days3').checked) {
+    dayx = Sum.dayk3.value;}
+ if (document.getElementById('days4').checked) {
+    dayx = Sum.dayk4.value;}
+ if (document.getElementById('days5').checked) {
+    dayx = Sum.dayk5.value;}
+ if (document.getElementById('days6').checked) {
+    dayx = Sum.dayk6.value;}
+
+
+ if (document.getElementById('name').checked) {
+    kino=Sum.fil.value;}
+ if (document.getElementById('name1').checked) {
+    kino=Sum.fil1.value;}
+ if (document.getElementById('name2').checked) {
+    kino=Sum.fil2.value;}
+ if (document.getElementById('name3').checked) {
+    kino=Sum.fil3.value;}
+/*RESULT*/      	  
+ var x=0, m=0, n=0, y=0, d=0, l=0;
+  if (document.getElementById('a').checked&&Sum.numbA.value>0) {
+    x = ( Sum.numbA.value*1 ) * time; }
+  if (document.getElementById('b').checked&&Sum.numbB.value>0) {
+    y = ( Sum.numbB.value*1 ) * timeChild;}
+  if (document.getElementById('c').checked&&Sum.numbC.value>0) {
+    m = ( Sum.numbC.value*1 ) * timeStud; }
+  if (document.getElementById('d').checked&&Sum.numbD.value>0) {
+    n = ( Sum.numbD.value*1 ) * timeSen; }
+  l = Sum.numbA.value*1+Sum.numbB.value*1+Sum.numbC.value*1+Sum.numbD.value*1;	
+  if (document.getElementById('e').checked&&
+     (Sum.numbA.value>0||Sum.numbD.value>0||Sum.numbC.value>0||Sum.numbD.value>0)&&
+	 (Sum.numbE.value<151&&Sum.numbE.value>0)&&
+	 (Sum.numbE.value<l+1)) {
+    dis = 30;
+	d = (Sum.numbE.value*1)*dis;}
+  if (l<151)
+  {  	
+	  Sum.numbSWD.value = x + y + m + n + 'KC';
+      Sum.numbSD.value = x + y + m + n - d + 'KC';
+      Sum.kinoS.value = kino;  
+      Sum.timeS.value = timekin;
+      Sum.dateS.value = dayx;
+  }
+ if (l>151)
+ {
+      Sum.numbS.value = '';
+      Sum.kinoS.value = '';  
+      Sum.timeS.value = '';
+      Sum.dateS.value = '';
+ }
+}
+/*FILM NAME CHANGE*/	
+function activate() {
+    if (document.getElementById('days').checked){
+        var x = document.getElementById('filk1'), y = document.getElementById('filk2'), z = document.getElementById('filk3'), a = document.getElementById('filk4');
+        x.setAttribute('value','Through darkness to knowledge'), y.setAttribute('value','Film without plot'), z.setAttribute('value','One day left'), a.setAttribute('value','30 shades of JS'); 		
+	}	
+    if (document.getElementById('days1').checked){
+        var x = document.getElementById('filk1'), y = document.getElementById('filk2'), z = document.getElementById('filk3'), a = document.getElementById('filk4');
+        x.setAttribute('value','LobsterHeaded'), y.setAttribute('value','Astronaut Jim'), z.setAttribute('value','Escander'), a.setAttribute('value','Checkmate');
+	}
+    if (document.getElementById('days2').checked){
+        var x = document.getElementById('filk1'), y = document.getElementById('filk2'), z = document.getElementById('filk3'), a = document.getElementById('filk4');
+        x.setAttribute('value','Through darkness to knowledge'), y.setAttribute('value','Film without plot'), z.setAttribute('value','Dr.Hakle&Mr.Jlide'), a.setAttribute('value','30 shades of JS');
+	}
+    if (document.getElementById('days3').checked){
+        var x = document.getElementById('filk1'), y = document.getElementById('filk2'), z = document.getElementById('filk3'), a = document.getElementById('filk4');
+        x.setAttribute('value','X-cofiles:New investigation'), y.setAttribute('value','Building a movie plot 2'), z.setAttribute('value','Old engine 3'), a.setAttribute('value','Split/second');
+	}
+    if (document.getElementById('days4').checked){
+        var x = document.getElementById('filk1'), y = document.getElementById('filk2'), z = document.getElementById('filk3'), a = document.getElementById('filk4');
+        x.setAttribute('value','Through black glass'), y.setAttribute('value','Checkmate'), z.setAttribute('value','One day left'), a.setAttribute('value','30 shades of JS');
+	}
+    if (document.getElementById('days5').checked){
+        var x = document.getElementById('filk1'), y = document.getElementById('filk2'), z = document.getElementById('filk3'), a = document.getElementById('filk4');
+        x.setAttribute('value','Escander'), y.setAttribute('value','New world'), z.setAttribute('value','One day left'), a.setAttribute('value','JoyPlay');
+	}
+    if (document.getElementById('days6').checked){
+        var x = document.getElementById('filk1'), y = document.getElementById('filk2'), z = document.getElementById('filk3'), a = document.getElementById('filk4');
+        x.setAttribute('value','Through darkness to knowledge'), y.setAttribute('value','Film without plot'), z.setAttribute('value','Through black glass'), a.setAttribute('value','Escander');
+	}
+}
+function book(a)
+    {
+	    if (document.getElementById('check').checked){
+		      document.forms[0].form.disabled=!(a==1);
+		}
+	    else{
+		      document.forms[0].form.disabled=!!(a==1);
+		}
+}		    
+</script>
+</head>
+
+<body>
+	<div class="head">
+		<img src="FONTEXT1.png" alt="Txt">
+	</div>
+	<div class="text">
+		<img src="FONHLAVA4.png" alt="hl">
+	</div>
+	<div class="menu">
+		<table style="height:145px"> 
+			<tr>
+				<td>
+					<a href="Hvybor.html"><img src="Kino3.png" alt="uber" ></a>
+				</td>
+				<td>
+					<a href="Hprice.html"><img src="Price.png" alt="price" ></a>
+				</td>
+				<td>
+					<a href="Hkino.html"><img src="Program.png" alt="prog" ></a>
+				</td>
+				<td>
+					<a href="Hvclub.html"><img src="VipC.png" alt="vip" ></a>
+				</td>
+				<td>
+					<a href="Hcontact.html"><img src="Contacts.png" alt="contact" ></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<br>
+	<br>
+	<div class="Booking">
+		<p>Book your tickets with ease right now!</p>
+		<p>Caution: when choosing "VIP CLUB" you'll be asked to show your card.</p>
+		<p>If you didn't choose anything, but still proceeded booking, your request</p>
+		<p>will be deleted immediately.</p>
+		<form action="Hbook.html" name="2" method="post">
+			<table>
+				<tr>
+					<th><u>Ticket Count</u><th><u>Time</u><th><u>Day</u></th><th><u>Film Names</u></th>
+				</tr>
+				<tr>
+					<td>		  
+						<p>
+							<input type=checkbox id="a">Adult <input type="text" name="numbA" size="20" maxlength="3">
+						</p>
+						
+							<p><input type=checkbox id="b">Child <input type="text" name="numbB" size="20" maxlength="3">
+						</p>
+						
+							<p><input type=checkbox id="c">Student <input type="text" name="numbC" size="20" maxlength="3">
+						</p>
+						
+							<p><input type=checkbox id="d">Senior <input type="text" name="numbD" size="20" maxlength="3">
+						</p>
+						
+							<p><input type=checkbox id="e">VIP Club<input type="text" name="numbE" size="20" maxlength="3">
+						</p>
+					</td>
+					<td>
+						<p>
+							<input type=radio name="timekin" id="kin" ><input type=text name="timek" id="kink" value="10:30" readonly size="3">
+						</p>
+						<p>
+							<input type=radio name="timekin" id="kin1"><input type=text name="timek1" id="kink1" value="12:40" readonly size="3">
+						</p>
+						<p>
+							<input type=radio name="timekin" id="kin2"><input type=text name="timek2" id="kink2" value="15:20" readonly size="3">
+						</p> 
+						<p>	
+							<input type=radio name="timekin" id="kin3"><input type=text name="timek3" id="kink3" value="17:50" readonly size="3">
+						</p>
+						<p>	
+							<input type=radio name="timekin" id="kin4"><input type=text name="timek4" id="kink4" value="19:40" readonly size="3">
+						</p>
+						<p>	
+							<input type=radio name="timekin" id="kin5"><input type=text name="timek5" id="kink5" value="21:30" readonly size="3">
+						</p>
+					</td>
+					<td>
+						<p>
+							<input type=radio name="day" id="days"  onClick="activate()"><input type=text name="dayk" id="timeday" value="Monday" readonly size="10">
+						</p>
+						<p>
+							<input type=radio name="day" id="days1"  onClick="activate()"><input type=text name="dayk1" id="timeday1" value="Tuesday" readonly size="10">
+						</p>
+						<p>
+							<input type=radio name="day" id="days2"  onClick="activate()"><input type=text name="dayk2" id="timeday2" value="Wednesday" readonly size="10">
+						</p>
+						<p>
+							<input type=radio name="day" id="days3"  onClick="activate()"><input type=text name="dayk3" id="timeday3" value="Thursday" readonly size="10">
+						</p>
+						<p>
+							<input type=radio name="day" id="days4"  onClick="activate()"><input type=text name="dayk4" id="timeday4" value="Friday" readonly size="10">
+						</p>
+						<p>
+							<input type=radio name="day" id="days5"  onClick="activate()"><input type=text name="dayk5" id="timeday5" value="Saturday" readonly size="10">
+						</p>
+						<p>	
+							<input type=radio name="day" id="days6"  onClick="activate()"><input type=text name="dayk6" id="timeday6" value="Sunday" readonly size="10">
+						</p>
+					</td>
+					<td>
+						<p>
+							<input type=radio name="namek" id="name"><input type=text name="fil" id="filk1" value="Through darkness to knowledge" size="30" readonly>
+						</p>
+						<p>
+							<input type=radio name="namek" id="name1"><input type=text name="fil1" id="filk2" value="Film without plot" size="30" readonly>
+						</p>
+						<p>
+							<input type=radio name="namek" id="name2"><input type=text name="fil2" id="filk3" value="one day left" size="30" readonly>
+						</p>
+						<p>
+							<input type=radio name="namek" id="name3"><input type=text name="fil3" id="filk4" value="30 shades of JS" size="30" readonly>
+						</p>
+					</tr>
+					<tr>
+					<td colspan="4">
+						<p>
+							Price For Tickets(discount): <input type="text" name="numbSD" size="60" readonly>
+						</p>
+						<p>
+							Price For Tickets(without discount): <input type="text" name="numbSWD" size="48" readonly>
+						</p>
+						<p>
+							Name Of The Film: <input type="text" name="kinoS" size="72" readonly>
+						</p>
+						<p>
+							Date : Day: <input type="text" name="dateS" size="35" readonly> Time: <input type="text" name="timeS" size="35" readonly></p>
+						<p>
+							<input type="button" value="   Calculate    " onClick="myF(this.form)">
+						</p>
+					</td>
+				</tr>
+			<tr>
+				<td colspan=2>
+					<button type=reset >Reset</button>
+				</td>
+				<td colspan=2>
+					<input type=submit value="Proceed" name="form" disabled><input type=checkbox id="check" onclick="book(1);">Confirm your choice.
+				</td>
+			</tr>
+		</table>
+	</form>
+	<p>Need a taxi to get to us? Call us : 222-222-2223</p>
+	</div>
+	<div class="end">
+		Design by Eduard Smetanin | Built by Eduard Smetanin
+	</div>
+</body>
+</html>

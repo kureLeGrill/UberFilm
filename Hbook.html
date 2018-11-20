@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>Book</title>
+<style>
+a:link {color:white;}      /* unvisited link */
+a:visited {color:white;}  /* visited link */
+a:hover {color:red;}  /* mouse over link */
+body{
+	background-image:url('FON.png');
+	background-position:top;
+	background-attachment:local;}
+.menu{
+	position:absolute;
+	top:35px;
+	right:583px;}
+.head{
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:-1}
+.text{
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:-1}
+table, td, th{
+	border:2px solid black;}
+th{
+	color:white;
+	font-size:160%;
+	font-family:Nyala;}	
+td{
+	color:white;
+	font-size:130%;
+	font-family:Nyala;}	
+.Doc{
+    position:absolute;
+    top:300px;
+    right:785px;}
+.Doc2{
+    position:absolute;
+    top:640px;
+    right:720px;}
+ .end{
+	position:absolute;
+	top:1180px;
+	font-size:75%;}
+</style>
+<script>	
+function sendf2() {
+    var n=document.forms['EMail']['name'].value;
+    var sn=document.forms['EMail']['sname'].value;
+	var t=document.forms['EMail']['tel'].value;
+	var em=document.forms['EMail']['e-mail'].value;
+    if ((n==null || n=="") && 
+		(sn==null || sn=="")&& 
+		(t==null || t=="") && 
+		(em==null || em=="")){
+		alert('You didn\'t fully fill the form');
+		return false;
+    }
+	var x=document.forms["EMail"]["e-mail"].value;
+	var atpos=x.indexOf('@'); 
+	var dotpos=x.indexOf('.');
+	if (atpos < 1 || dotpos<atpos+2 || dotpos+2>x.length) {
+		alert('Invalid E-mail adress');
+		return false;
+	} else {
+		alert('Booking is successful');
+	}
+} 
+</script>
+</head>
+<body>
+	<div class="head">
+		<img src="FONTEXT1.png" alt="Txt">
+	</div>
+	<div class="text">
+		<img src="FONHLAVA4.png" alt="hl">
+	</div>
+	<div class="menu">
+		<table style="height:145px"> 
+			<tr>
+				<td>
+					<a href="Hvybor.html"><img src="Kino3.png" alt="uber" ></a>
+				</td>
+				<td>
+					<a href="Hprice.html"><img src="Price.png" alt="price" ></a>
+				</td>
+				<td>
+					<a href="Hkino.html"><img src="Program.png" alt="prog" ></a>
+				</td>
+				<td>
+					<a href="Hvclub.html"><img src="VipC.png" alt="vip" ></a>
+				</td>
+				<td>
+					<a href="Hcontact.html"><img src="Contacts.png" alt="contact" ></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="Doc">
+		<form action="Hvybor.html" name="EMail"  onsubmit="return sendf2();" method="post">
+			<table>
+				<tr>
+					<th colspan="2">
+						Booking your tickets
+					</th>
+				</tr>
+				<tr>
+					<td>
+						<p>Your name</p>
+						<p>Your Surname</p>
+						<p>Your Telephone</p>
+						<p>Your E-Mail</p>
+					</td>
+					<td>
+						<p><input type="text" name="name" id="name1"></p>
+						<p><input type="text" name="sname" id="sname1"></p>
+						<p><input type="text" name="tel" id="t1"></p>
+						<p><input type="text" name="e-mail" id="mail1"></p>
+					</td>
+				<tr>
+					<th colspan="2">
+						<p><input type="submit" name="book" id="b" value="Book"></p>
+					</th>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<div class="Doc2">
+		<table>
+			<tr>
+				<td>
+					After this procedure, you will be sent to the main page
+				</td>
+			</tr>
+		</table>	
+	</div>	
+	<div class="end">
+		Design by Eduard Smetanin | Built by Eduard Smetanin
+	</div>
+
+</body>
+</html>

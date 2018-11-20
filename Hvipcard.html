@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>Vip</title>
+<style>
+body {
+	background-image:url('FON.png')}
+.head{
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:-1}
+.text{
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:-1}
+.menu{
+	position:absolute;
+	top:35px;
+	right:583px}
+table, td{
+	border:2px solid black;}
+
+ul{
+	color:white;
+	font-size:120%;
+	font-family:Nyala}
+p {
+	color:white;
+	font-size:120%;
+	font-family:Nyala}
+u {
+	color:white;
+	font-size:120%;
+	font-family:Nyala}
+.Doc{
+    position:absolute;
+    top:300px;
+    right:650px;}
+.Doc2{
+    position:absolute;
+    top:850px;
+    right:725px;}
+ .end{
+	position:absolute;
+	top:1180px;
+	font-size:75%;}
+</style>
+<script type="text/javascript">
+
+function sendf(a) {
+	if (document.getElementById('Agr').checked){
+		document.forms[0].form.disabled=!(a==1);
+	}
+	else {
+		document.forms[0].form.disabled=!!(a==1); 
+	}
+}
+	
+function sendf2() {
+    var n=document.forms['EMail']['Name'].value;
+    var sn=document.forms['EMail']['SName'].value;
+    var a=document.forms['EMail']['Age'].value;
+	var t=document.forms['EMail']['Tel'].value;
+	var em=document.forms['EMail']['Mail'].value;
+	var ad=document.forms['EMail']['Address'].value;
+    if ((n==null || n=="") && 
+		(sn==null || sn=="") && 
+	    (a==null || a=="") && 
+		(t==null || t=="") && 
+		(em==null || em=="") && 
+		(ad==null || ad=="")){
+		alert('You didn\'t fully fill the form');
+		return false;
+    }
+	var x=document.forms["EMail"]["Mail"].value;
+	var atpos=x.indexOf('@'); 
+	var dotpos=x.indexOf('.');
+	if (atpos < 1 || dotpos<atpos+2 || dotpos+2>x.length) {
+		alert('Invalid E-mail adress');
+		return false;
+	} else {
+		alert('Your request for VIP Card was sent');
+	}
+} 
+
+</script>
+</head>
+
+<body>
+	<div class="head">
+		<img src="FONTEXT1.png" alt="Txt" />
+	</div>
+	<div class="text">
+		<img src="FONHLAVA4.png" alt="hl" />
+	</div>
+	<div class="menu">
+		<table style="height:145px"> 
+			<tr>
+				<td>
+					<a href="Hvybor.html"><img src="Kino3.png" alt="uber" ></a>
+				</td>
+				<td>
+					<a href="Hprice.html"><img src="Price.png" alt="price" ></a>
+				</td>
+				<td>
+					<a href="Hkino.html"><img src="Program.png" alt="prog" ></a>
+				</td>
+				<td>
+					<a href="Hvclub.html"><img src="VipC.png" alt="vip" ></a>
+				</td>
+				<td>
+					<a href="Hcontact.html"><img src="Contacts.png" alt="contact" ></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="Doc">
+		<p>
+			<u>Getting VIP Card is easy! You can complete necessary form right now,</u>
+		</p>
+		<p>
+			<u>in front of your computer!</u>
+		</p>
+		<form action="Hvclub.html" name="EMail" onsubmit="return sendf2();" method="post">
+		<table>
+			<tr>
+				<th>
+					<ul>
+						<li>
+							<p>
+								Name <input type="text" name="Name" id="N" size="40">
+							</p>
+						</li>
+						<li>
+							<p>
+								Surename <input type="text" name="SName" id="SN" size="40">
+							</p>
+						</li>
+						<li>
+							<p>
+								Age <input type="text" name="Age" id="A" size="40">
+							</p>
+						</li>
+						<li>
+							<p>
+								Tel. <input type="text" name="Tel" id="T" size="40">
+							</p>
+						</li>
+						<li>
+							<p>
+								E-Mail <input type="text" name="Mail" id="M" size="40">
+							</p>
+						</li>
+						<li>
+							<p>
+								Address <input type="text" name="Address" id="Ad" size="40">
+							</p>
+						</li>
+						<li>
+							<p>
+								I am agree with the rules of VIP Club of "UBERFILM" cinema<input type=checkbox name="agr" id="Agr" onclick="sendf(1);">
+							</p>
+						</li>
+					</ul>
+					<p>
+						<input type=submit value="Send the form" name="form" id="fr" disabled style="width:200px" >
+					</p>
+				</th>	
+			</tr>
+		</table>
+	</form>
+</div>
+
+<div class="Doc2">
+	<table>
+		<tr>
+			<th>
+				<p>After completing it, you will</p>
+				<p>return to the main web page. All you have to do is just</p>
+				<p>ask about your card on the ticket window and get it right there!</p>
+				<p>See how easy it is!</p>
+			</th>
+		</tr>
+	</table>
+</div>
+<div class="end">
+	Design by Eduard Smetanin | Built by Eduard Smetanin
+
+</body>
+
+</html>

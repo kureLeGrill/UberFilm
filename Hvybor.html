@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> "UBERKINO" </title>
+<meta charset="UTF-8">
+<style>
+a:link {color:white;}      /* unvisited link */
+a:visited {color:white;}  /* visited link */
+a:hover {color:red;}  /* mouse over link */
+body{
+	background-image:url('FON.png');
+	background-position:top;
+	background-attachment:local;}
+p{
+	color:white;
+	font-size:120%;
+	font-family:Nyala}
+table, td{
+	border:2px solid black;}	
+.menu{
+	position:absolute;
+	top:35px;
+	right:583px;}
+.head{
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:-1}
+.text{
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:-1}
+ .Film{
+	position:absolute;
+    top:235px;
+    right:953px;}
+ .Film2{
+    position:absolute;
+    top:591px;
+    right:980px;}
+ .Film3{
+    position:absolute;
+    top:591px;
+    right:626px;}
+ .Film4{
+    position:absolute;
+    top:850px;
+    right:860px;}
+ .Text2{
+    position:absolute;
+    top:235px;
+    right:600px;}
+ .Comer{
+    position:absolute;
+    top:980px;
+    right:630px;}
+ .Comer2{
+    position:absolute;
+    top:930px;
+    right:900px;}
+ .end{
+	position:absolute;
+	top:1180px;
+	font-size:75%;}
+</style>
+<script>
+function activate() {
+	var img=document.getElementById('1');
+	var img2=document.getElementById('2');
+	var img3=document.getElementById('3');
+	img.setAttribute('src','Jakil.png');
+	img2.setAttribute('src','world.png');
+	img3.setAttribute('src','chess.png');
+}
+function deactivate() {
+	var img=document.getElementById('1');
+	var img2=document.getElementById('2');
+	var img3=document.getElementById('3');
+	img.setAttribute('src','30Shades.png');
+	img2.setAttribute('src','Xfilm.png');
+	img3.setAttribute('src','OneDay2.png');	
+}
+</script>
+</head>
+<body>
+	<div class="head">
+		<img src="FONTEXT1.png" alt="Txt">
+	</div>
+	<div class="text">
+		<img src="FONHLAVA4.png" alt="hl">
+	</div>
+	<div class="menu">
+		<table style="height:145px"> 
+			<tr>
+				<td>
+					<a href="Hvybor.html"><img src="Kino3.png" alt="uber" ></a>
+				</td>
+				<td>
+					<a href="Hprice.html"><img src="Price.png" alt="price" ></a>
+				</td>
+				<td>
+					<a href="Hkino.html"><img src="Program.png" alt="prog" ></a>
+				</td>
+				<td>
+					<a href="Hvclub.html"><img src="VipC.png" alt="vip" ></a>
+				</td>
+				<td>
+					<a href="Hcontact.html"><img src="Contacts.png" alt="contact" ></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="Text2">
+	<table>
+		<tr>
+			<td>
+				<p>New Event:</p>
+				<p>Watch one of these till the end</p>
+				<p>of the month and get 5 more bonus points</p>
+				<p>on your VIP club card.</p>  
+				<img src="Jim.png" alt="Jim"><img src="glass.png" alt="Jim">
+			</td>
+		</tr>
+	</table>
+	</div>
+	<div class="Film">
+		<p>Check out most recommended films of 2014.</p>	
+		<img src="OneDay2.png" alt="One" id="3">
+	</div>
+	<div class="Film2">
+		<img src="30Shades.png" alt="Shades" id="1">
+	</div>
+	<div class="Film3">
+		<img src="Xfilm.png" alt="Shades" id="2">
+	</div>
+	<div class="Film4">
+		<img src="arrow2.png" alt="Shades" onclick="activate()"> 
+		<img src="arrow.png" alt="Shades" onclick="deactivate()">		
+	</div>
+	<div class="Comer2">
+		<p>Our partners:
+	</div>
+	<div class="Comer">
+		<iframe src="Hcomer.html" width="620" height="210"></iframe>
+	</div>
+	<div class="end">
+		Design by Eduard Smetanin | Built by Eduard Smetanin
+	</div>
+</body>
+</html>

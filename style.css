@@ -1,0 +1,46 @@
+a:link {color:white;}      /* unvisited link */
+a:visited {color:white;}  /* visited link */
+a:hover {color:red;}  /* mouse over link */
+body
+{background-image:url('FON.png');
+background-position:top;
+background-attachment:local;}
+table, td, th
+  {border:2px solid black;}
+td
+  {border:2px solid black;}
+th
+  {border:2px solid black;}
+p
+  {color:white;
+  font-size:120%;
+  font-family:Nyala}
+form
+  {color:white;
+   font-size:120%;}
+u
+  {color:white;
+   font-size:120%;}
+.Booking
+  {position:absolute;
+   top:250px;
+   right:575px;}
+.menu
+{
+  position:absolute;
+  top:35px;
+  right:583px;}
+.head{
+  position:absolute;
+  top:0px;
+  right:0px;
+  z-index:-1}
+.text{
+  position:absolute;
+  top:0px;
+  right:0px;
+  z-index:-1}
+.end{
+	position:absolute;
+	top:1180px;
+	font-size:75%;}
