@@ -47,45 +47,7 @@ u {
 	top:1180px;
 	font-size:75%;}
 </style>
-<script type="text/javascript">
-
-function sendf(a) {
-	if (document.getElementById('Agr').checked){
-		document.forms[0].form.disabled=!(a==1);
-	}
-	else {
-		document.forms[0].form.disabled=!!(a==1); 
-	}
-}
-	
-function sendf2() {
-    var n=document.forms['EMail']['Name'].value;
-    var sn=document.forms['EMail']['SName'].value;
-    var a=document.forms['EMail']['Age'].value;
-	var t=document.forms['EMail']['Tel'].value;
-	var em=document.forms['EMail']['Mail'].value;
-	var ad=document.forms['EMail']['Address'].value;
-    if ((n==null || n=="") && 
-		(sn==null || sn=="") && 
-	    (a==null || a=="") && 
-		(t==null || t=="") && 
-		(em==null || em=="") && 
-		(ad==null || ad=="")){
-		alert('You didn\'t fully fill the form');
-		return false;
-    }
-	var x=document.forms["EMail"]["Mail"].value;
-	var atpos=x.indexOf('@'); 
-	var dotpos=x.indexOf('.');
-	if (atpos < 1 || dotpos<atpos+2 || dotpos+2>x.length) {
-		alert('Invalid E-mail adress');
-		return false;
-	} else {
-		alert('Your request for VIP Card was sent');
-	}
-} 
-
-</script>
+<script type="text/javascript" src="JS/script.js"></script>
 </head>
 
 <body>

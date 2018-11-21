@@ -47,30 +47,7 @@ td{
 	top:1180px;
 	font-size:75%;}
 </style>
-<script>	
-function sendf2() {
-    var n=document.forms['EMail']['name'].value;
-    var sn=document.forms['EMail']['sname'].value;
-	var t=document.forms['EMail']['tel'].value;
-	var em=document.forms['EMail']['e-mail'].value;
-    if ((n==null || n=="") && 
-		(sn==null || sn=="")&& 
-		(t==null || t=="") && 
-		(em==null || em=="")){
-		alert('You didn\'t fully fill the form');
-		return false;
-    }
-	var x=document.forms["EMail"]["e-mail"].value;
-	var atpos=x.indexOf('@'); 
-	var dotpos=x.indexOf('.');
-	if (atpos < 1 || dotpos<atpos+2 || dotpos+2>x.length) {
-		alert('Invalid E-mail adress');
-		return false;
-	} else {
-		alert('Booking is successful');
-	}
-} 
-</script>
+<script type="text/javascript" src="JS/script.js"></script>
 </head>
 <body>
 	<div class="head">
